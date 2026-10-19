@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- **`generate-types`** types JSON features as `Record<string, unknown> | unknown[]`, so a JSON
+  feature whose value is an array no longer fails to type-check.
+
 ## [3.1.0] - 2026-10-08
 
 ### Added

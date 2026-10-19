@@ -130,7 +130,8 @@ func tsType(vt components.FeatureV2ValueType) string {
 	case components.FeatureV2ValueTypeBoolean, components.FeatureV2ValueTypeNumber, components.FeatureV2ValueTypeString:
 		return string(vt)
 	case components.FeatureV2ValueTypeJSON:
-		return "Record<string, unknown>"
+		// A JSON feature value may be an object or an array.
+		return "Record<string, unknown> | unknown[]"
 	default:
 		return "unknown"
 	}
