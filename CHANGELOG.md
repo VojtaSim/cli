@@ -4,8 +4,9 @@
 
 ### Fixed
 
-- **`generate-types`** types JSON features as `Record<string, unknown> | unknown[]`, so a JSON
-  feature whose value is an array no longer fails to type-check.
+- **`generate-types`** types a JSON feature whose default value is an array as `unknown[]`, so
+  array-valued features no longer fail to type-check. Object-valued JSON features keep
+  `Record<string, unknown>`.
 
 ## [3.1.0] - 2026-10-08
 
